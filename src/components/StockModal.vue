@@ -219,7 +219,7 @@
                 <h4 class="font-semibold text-gray-800 mb-3">Evaluación de Riesgo</h4>
                 <div class="space-y-2">
                   <div class="flex items-center justify-between">
-                    <span class="text-gray-600">Confianza del Algoritmo:</span>
+                    <span class="text-gray-600">Confianza:</span>
                     <div class="flex items-center">
                       <div class="flex space-x-1">
                         <div
