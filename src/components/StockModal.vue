@@ -96,7 +96,7 @@
               </h3>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="space-y-3">
+                <div class="space-y-3 border-2 border-gray-200 p-5 rounded-xl">
                   <div class="flex justify-between">
                     <span class="text-gray-600">Brokerage:</span>
                     <span class="font-medium text-gray-800">{{ stock?.brokerage }}</span>
@@ -114,12 +114,14 @@
                   <div class="flex justify-between">
                     <span class="text-gray-600">Rating:</span>
                     <span class="font-medium text-gray-800">
-                      {{ stock?.ratingFrom }} → {{ stock?.ratingTo }}
+                      {{ stock?.ratingFrom }} →
+                      <template v-if="(stock?.ratingFrom ?? '').length > 10"><br /></template
+                      >{{ stock?.ratingTo }}
                     </span>
                   </div>
                 </div>
 
-                <div class="space-y-3">
+                <div class="space-y-3 border-2 border-gray-200 p-5 rounded-xl">
                   <div class="flex justify-between">
                     <span class="text-gray-600">Target Price:</span>
                     <div class="text-right">
