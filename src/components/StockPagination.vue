@@ -83,7 +83,7 @@ const stockStore = useStockStore()
 
 const canGoNext = computed(() => !!props.next)
 const canGoPrev = computed(() => !!props.prev)
-const isFirstPage = computed(() => !props.prev && !stockStore.cursor.current)
+const isFirstPage = computed(() => !props.prev)
 
 const goToNextPage = () => {
   stockStore.setCursor(props.next, 'next')
