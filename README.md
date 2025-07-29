@@ -24,19 +24,31 @@ Aplicación web desarrollada con Vue 3 para la visualización y gestión de dato
 
 ## Instalación
 
-1. Instalar dependencias:
+1. Configurar variables de entorno:
+
+```bash
+cp .env.template .env
+```
+
+Editar el archivo `.env` y configurar la URL base de la API:
+
+```bash
+VITE_BASE_API_URL=http://localhost:3000
+```
+
+2. Instalar dependencias:
 
 ```bash
 pnpm install
 ```
 
-2. Iniciar servidor de desarrollo:
+3. Iniciar servidor de desarrollo:
 
 ```bash
 pnpm dev
 ```
 
-3. Construir para producción:
+4. Construir para producción:
 
 ```bash
 pnpm build
@@ -44,7 +56,7 @@ pnpm build
 
 ## API
 
-La aplicación se conecta a una API REST en `http://localhost:3000/api/v1` con los siguientes endpoints:
+La aplicación se conecta a una API REST configurada a través de la variable de entorno `VITE_BASE_API_URL/api/v1` con los siguientes endpoints:
 
 - `GET /stocks` - Lista de stocks con paginación y filtros
 - `GET /stocks/:id` - Detalle de una stock específico
